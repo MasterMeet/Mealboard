@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="android.Mealboard.MealBoard">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/groceries"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/groceries"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".GoogleSignInActivity"></activity>
+        <activity android:name=".ParthAboutActivity" />
+        <activity android:name=".MeetrajAboutActivity" />
+        <activity android:name=".ChintanAboutActivity" />
+        <activity android:name=".MyTeamActivity" />
+        <activity android:name=".OrderDetailActivity" />
+        <activity android:name=".AboutActivity" />
+        <activity android:name=".MyOrdersActivity" />
+        <activity android:name=".DashboardActivity">
+        </activity>
+        <activity android:name=".RegisterActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoginActivity" >
+
+        </activity>
+        <activity android:name=".CartActivity" />
+        <activity android:name=".ItemsDetailsActivity" />
+        <activity android:name=".ItemsActivity" />
+        <activity android:name=".CategoriesActivity" />
+    </application>
+
+</manifest>
