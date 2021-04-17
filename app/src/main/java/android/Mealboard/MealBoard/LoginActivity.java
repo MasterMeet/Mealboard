@@ -27,23 +27,18 @@ public class LoginActivity extends AppCompatActivity {
     TextView CrateAccount;
     EditText inputEmail, inputPassword;
     Button LoginButton;
-    com.google.android.gms.common.SignInButton GoogleSignIn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
         inputEmail = findViewById(R.id.input_emaillogin);
-        GoogleSignIn = findViewById(R.id.sign_in_button);
         inputPassword = findViewById(R.id.input_passwordlogin);
         LoginButton = findViewById(R.id.btnLogin) ;
         CrateAccount  = findViewById(R.id.create_account);
         CrateAccount.setPaintFlags(CrateAccount.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
         CrateAccount.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(),RegisterActivity.class)));
 
-        GoogleSignIn.setOnClickListener(v -> {
-               MDToast.makeText(LoginActivity.this,"Google Auth",Toast.LENGTH_LONG,MDToast.TYPE_INFO).show();
-        });
         LoginButton.setOnClickListener(v -> {
             if(inputEmail.getText().toString().equals("")){
                 MDToast.makeText(LoginActivity.this,"Please Enter Email",Toast.LENGTH_LONG,MDToast.TYPE_ERROR).show();
