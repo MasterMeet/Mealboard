@@ -7,8 +7,6 @@ import android.Mealboard.MealBoard.models.OrderResponseModel;
 import android.Mealboard.MealBoard.models.PlaceOrderResponse;
 import android.Mealboard.MealBoard.models.RegistrationResponseModel;
 
-import androidx.constraintlayout.widget.Placeholder;
-
 import java.util.HashMap;
 
 import retrofit2.Call;
