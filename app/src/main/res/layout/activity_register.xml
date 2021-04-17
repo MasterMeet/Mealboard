@@ -22,161 +22,162 @@
                 android:layout_height="150dp"
                 android:layout_marginLeft="40dp"
                 android:src="@drawable/banner_login" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/register"
-        android:layout_marginStart="120dp"
-        android:textSize="@dimen/headerTextSize"
-        android:textColor="@color/blackTextColor"
-        android:textStyle="bold" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register"
+                android:layout_marginStart="120dp"
+                android:textSize="@dimen/headerTextSize"
+                android:textColor="@color/blackTextColor"
+                android:textStyle="bold" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textFirstInputName"
-        style="@style/parent.TextLayout"
-        android:layout_marginTop="@dimen/signup_text_margin_top">
-        <EditText
-            android:autofillHints="@string/fname"
-            android:id="@+id/input_fname_register"
-            style="@style/modifiedEditText"
-            android:inputType="textPersonName"
-            android:maxLines="1"
-            android:hint="@string/fname"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textFirstInputName"
+                style="@style/parent.TextLayout"
+                android:layout_marginTop="@dimen/signup_text_margin_top">
+                <EditText
+                    android:autofillHints="@string/fname"
+                    android:id="@+id/input_fname_register"
+                    style="@style/modifiedEditText"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:hint="@string/fname"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textLastInputName"
-        style="@style/parent.TextLayout"
-        android:layout_marginTop="@dimen/signup_text_margin_top">
-        <EditText
-            android:autofillHints="@string/lname"
-            android:id="@+id/input_lname_register"
-            style="@style/modifiedEditText"
-            android:inputType="textPersonName"
-            android:maxLines="1"
-            android:hint="@string/lname"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textLastInputName"
+                style="@style/parent.TextLayout"
+                android:layout_marginTop="@dimen/signup_text_margin_top">
+                <EditText
+                    android:autofillHints="@string/lname"
+                    android:id="@+id/input_lname_register"
+                    style="@style/modifiedEditText"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:hint="@string/lname"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputEmail"
-        style="@style/parent.TextLayout"
-        android:layout_marginTop="@dimen/signup_text_margin_top">
-        <EditText
-            android:autofillHints="@string/email_hint"
-            android:id="@+id/input_email_register"
-            style="@style/modifiedEditText"
-            android:inputType="textEmailAddress"
-            android:maxLines="1"
-            android:hint="@string/email_hint"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputEmail"
+                style="@style/parent.TextLayout"
+                android:layout_marginTop="@dimen/signup_text_margin_top">
+                <EditText
+                    android:autofillHints="@string/email_hint"
+                    android:id="@+id/input_email_register"
+                    style="@style/modifiedEditText"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:hint="@string/email_hint"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputPassword"
-        style="@style/parent.TextLayout"
-        android:layout_marginTop="@dimen/signup_text_margin_top">
-        <EditText
-            android:autofillHints="@string/password_hint"
-            android:id="@+id/input_password_register"
-            style="@style/modifiedEditText"
-            android:hint="@string/password_hint"
-            android:maxLines="1"
-            android:inputType="textPassword"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputPassword"
+                style="@style/parent.TextLayout"
+                android:layout_marginTop="@dimen/signup_text_margin_top">
+                <EditText
+                    android:autofillHints="@string/password_hint"
+                    android:id="@+id/input_password_register"
+                    style="@style/modifiedEditText"
+                    android:hint="@string/password_hint"
+                    android:maxLines="1"
+                    android:inputType="textPassword"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputConfirmPassword"
-        style="@style/parent.TextLayout"
-        android:layout_marginTop="@dimen/signup_text_margin_top">
-        <EditText
-            android:autofillHints="@string/confirm_password_hint"
-            android:id="@+id/input_confirmPassword_register"
-            style="@style/modifiedEditText"
-            android:hint="@string/confirm_password_hint"
-            android:maxLines="1"
-            android:inputType="textPassword"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputConfirmPassword"
+                style="@style/parent.TextLayout"
+                android:layout_marginTop="@dimen/signup_text_margin_top">
+                <EditText
+                    android:autofillHints="@string/confirm_password_hint"
+                    android:id="@+id/input_confirmPassword_register"
+                    style="@style/modifiedEditText"
+                    android:hint="@string/confirm_password_hint"
+                    android:maxLines="1"
+                    android:inputType="textPassword"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputMobileNo"
-        style="@style/parent.TextLayout"
-        android:layout_marginTop="@dimen/signup_text_margin_top">
-        <EditText
-            android:autofillHints="@string/mobile_no_hint"
-            android:id="@+id/input_mobileNo_register"
-            style="@style/modifiedEditText"
-            android:hint="@string/mobile_no_hint"
-            android:maxLines="1"
-            android:inputType="textPassword"/>
-    </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputMobileNo"
+                style="@style/parent.TextLayout"
+                android:layout_marginTop="@dimen/signup_text_margin_top">
+                <EditText
+                    android:autofillHints="@string/mobile_no_hint"
+                    android:id="@+id/input_mobileNo_register"
+                    style="@style/modifiedEditText"
+                    android:hint="@string/mobile_no_hint"
+                    android:maxLines="1"
+                    android:inputType="textPassword"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
-        <Spinner
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:id="@+id/country_spinner"
-            android:layout_margin="10dp"/>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/country_spinner"
+                android:layout_margin="10dp"/>
 
-        <Spinner
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:id="@+id/state_spinner"
-            android:layout_margin="10dp"/>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/state_spinner"
+                android:layout_margin="10dp"/>
 
-        <Spinner
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:id="@+id/city_spinner"
-            android:layout_margin="10dp"/>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:id="@+id/city_spinner"
+                android:layout_margin="10dp"/>
 
-        <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="20dp"
-            android:orientation="horizontal" >
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:orientation="horizontal" >
                 <TextView
                     android:layout_width="70dp"
                     android:layout_height="wrap_content"
                     android:textSize="16sp"
                     android:textColor="@color/blackTextColor"
                     android:text="@string/gender"/>
-            <RadioButton
-                android:id="@+id/radioButton"
-                android:layout_width="70dp"
+                <RadioButton
+                    android:id="@+id/radioButton"
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/male" />
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:text="@string/female" />
+            </RadioGroup>
+
+            <Button
+                android:layout_width="330dp"
                 android:layout_height="wrap_content"
-                android:text="@string/male" />
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="50dp"
+                android:text="@string/register_btn"
+                android:gravity="center"
+                android:background="@color/colorPrimary"
+                android:textColor="#ffffff"
+                android:id="@+id/btnLogin"
+                android:textStyle="bold"
+                android:textAllCaps="false"
+                android:textSize="14sp"/>
 
-            <RadioButton
-                android:id="@+id/radioButton2"
-                android:layout_width="150dp"
+            <TextView
+                android:id="@+id/text_login_now"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:text="@string/female" />
-        </RadioGroup>
-
-    <Button
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="50dp"
-        android:text="@string/register_btn"
-        android:background="@color/colorPrimary"
-        android:textColor="#ffffff"
-        android:id="@+id/btnLogin"
-        android:textStyle="bold"
-        android:textAllCaps="false"
-        android:textSize="14sp"/>
-
-    <TextView
-        android:id="@+id/text_login_now"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:layout_marginStart="90dp"
-        android:layout_marginBottom="50dp"
-        android:textStyle="bold"
-        android:textColor="@color/blue"
-        android:textSize="12sp"
-        android:text="@string/register_to_login" />
+                android:layout_marginTop="50dp"
+                android:layout_marginStart="90dp"
+                android:layout_marginBottom="50dp"
+                android:textStyle="bold"
+                android:textColor="@color/blue"
+                android:textSize="12sp"
+                android:text="@string/register_to_login" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
