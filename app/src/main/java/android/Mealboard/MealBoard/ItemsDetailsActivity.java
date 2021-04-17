@@ -1,20 +1,25 @@
 package android.Mealboard.MealBoard;
 
-import androidx.appcompat.app.AppCompatActivity;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
-import com.squareup.picasso.Picasso;
-import android.content.Intent;
-import android.util.Log;
-import android.widget.Toast;
 import android.Mealboard.MealBoard.database.DatabaseHandler;
 import android.Mealboard.MealBoard.models.ItemModel;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 public class ItemsDetailsActivity extends AppCompatActivity {
-    ImageView imageaddtocart;
+    ImageView CartDetail;
+    Button btnAddToCart;
     ImageView imageItem;
     ImageView imageBack;
     TextView txtQuantity,txtPrice,textToolbarTitle;
@@ -24,10 +29,11 @@ public class ItemsDetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_items_details);
 
-        imageaddtocart = (ImageView) findViewById(R.id.addtocart) ;
+        CartDetail = (ImageView) findViewById(R.id.addtocart) ;
         imageItem = findViewById(R.id.image_item);
         txtQuantity = findViewById(R.id.text_quantity);
         txtPrice = findViewById(R.id.text_price);
+        btnAddToCart = findViewById(R.id.btnAddToCart);
         textToolbarTitle = findViewById(R.id.text_toolbar_title);
         imageBack = findViewById(R.id.image_back);
         imageBack.setOnClickListener(new View.OnClickListener() {
@@ -42,7 +48,15 @@ public class ItemsDetailsActivity extends AppCompatActivity {
         txtPrice.setText("\u20B9"+getIntent().getStringExtra("price"));
         txtQuantity.setText(getIntent().getStringExtra("quantity"));
 
-        imageaddtocart.setOnClickListener(new View.OnClickListener() {
+        CartDetail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ItemsDetailsActivity.this, CartActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnAddToCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ItemModel itemModel = new ItemModel();

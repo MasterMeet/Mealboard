@@ -6,6 +6,7 @@
     android:paddingTop="50dp"
     android:focusableInTouchMode="true"
     xmlns:android="http://schemas.android.com/apk/res/android">
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="150dp"
@@ -61,14 +62,6 @@
         android:textAllCaps="false"
         android:textSize="14sp"/>
 
-    <com.google.android.gms.common.SignInButton
-        android:id="@+id/sign_in_button"
-        android:layout_width="330dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="15dp"
-        android:layout_centerInParent="true" />
     <TextView
         android:id="@+id/create_account"
         android:layout_width="wrap_content"

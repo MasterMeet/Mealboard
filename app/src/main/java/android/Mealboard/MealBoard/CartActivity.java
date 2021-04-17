@@ -72,9 +72,6 @@ public class CartActivity extends AppCompatActivity {
                     params.put("total_amount", String.valueOf(TotalAmount));
                     params.put("products", new Gson().toJson(cartitems));
                     params.put("order_date", new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date()));
-                    Intent intent = new Intent(getBaseContext(),GpayActivity.class);
-                    intent.putExtra("Amount",String.valueOf(TotalAmount));
-                    startActivity(intent);
                     Placeorder(params);
                 }
             }

@@ -19,7 +19,6 @@
             android:name="com.google.android.gms.wallet.api.enabled"
             android:value="true" />
 
-        <activity android:name=".GoogleSignInActivity" />
         <activity android:name=".ParthAboutActivity" />
         <activity android:name=".MeetrajAboutActivity" />
         <activity android:name=".ChintanAboutActivity" />
