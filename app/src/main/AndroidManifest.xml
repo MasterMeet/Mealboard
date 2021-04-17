@@ -13,6 +13,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".GpayActivity"></activity>
+
+        <meta-data
+            android:name="com.google.android.gms.wallet.api.enabled"
+            android:value="true" />
+
         <activity android:name=".GoogleSignInActivity" />
         <activity android:name=".ParthAboutActivity" />
         <activity android:name=".MeetrajAboutActivity" />
@@ -21,7 +27,7 @@
         <activity android:name=".OrderDetailActivity" />
         <activity android:name=".AboutActivity" />
         <activity android:name=".MyOrdersActivity" />
-        <activity android:name=".DashboardActivity"></activity>
+        <activity android:name=".DashboardActivity" />
         <activity android:name=".RegisterActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,7 +35,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".LoginActivity" />
         <activity android:name=".CartActivity" />
         <activity android:name=".ItemsDetailsActivity" />
         <activity android:name=".ItemsActivity" />

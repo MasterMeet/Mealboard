@@ -1,9 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GpayActivity">
+    tools:context=".GpayActivity"
+    android:orientation="vertical">
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
+        android:src="@drawable/gpay" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        style="@style/viewParent"
+        android:layout_marginTop="20dp"
+        android:text="Payment Using Gpay"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/headerTextSize"
+        android:textColor="@color/blackTextColor"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="60dp"
+        android:id="@+id/amount_et"
+        android:inputType="numberDecimal"
+        android:textStyle="bold"
+        android:text="5"/>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputName"
+        style="@style/parent.TextLayout"
+        android:layout_marginTop="@dimen/signup_text_margin_top">
+        <EditText
+            android:autofillHints="@string/email_hint"
+            android:hint="Name"
+            android:id="@+id/name"
+            style="@style/modifiedEditText"
+            android:inputType="textPersonName"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputUpi"
+        style="@style/parent.TextLayout"
+        android:layout_marginTop="@dimen/signup_text_margin_top">
+        <EditText
+            android:autofillHints="UPI ID"
+            android:id="@+id/upi_id"
+            android:hint="UPI ID"
+            android:text="kamal.bunkar07@okaxis"
+            style="@style/modifiedEditText"
+            android:inputType="textNoSuggestions"
+            android:maxLines="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputPassword"
+        style="@style/parent.TextLayout"
+        android:layout_marginTop="@dimen/signup_text_margin_top">
+        <EditText
+            android:hint="Note"
+            style="@style/modifiedEditText"
+            android:id="@+id/note"
+            android:text="Test UPI Payment"
+            android:maxLines="2"
+            android:inputType="text|textMultiLine"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:text="@string/pay_now"
+        android:background="@color/colorPrimary"
+        android:textColor="#ffffff"
+        android:id="@+id/send"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textSize="14sp"/>
+</LinearLayout>

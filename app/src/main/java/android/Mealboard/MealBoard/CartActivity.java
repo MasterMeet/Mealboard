@@ -1,10 +1,7 @@
 package android.Mealboard.MealBoard;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
+import android.Mealboard.MealBoard.database.DatabaseHandler;
+import android.Mealboard.MealBoard.models.ItemModel;
 import android.Mealboard.MealBoard.models.PlaceOrderResponse;
 import android.Mealboard.MealBoard.network.NetworkClient;
 import android.Mealboard.MealBoard.network.NetworkService;
@@ -21,8 +18,11 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.Mealboard.MealBoard.database.DatabaseHandler;
-import android.Mealboard.MealBoard.models.ItemModel;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
@@ -72,10 +72,10 @@ public class CartActivity extends AppCompatActivity {
                     params.put("total_amount", String.valueOf(TotalAmount));
                     params.put("products", new Gson().toJson(cartitems));
                     params.put("order_date", new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date()));
+                    Intent intent = new Intent(getBaseContext(),GpayActivity.class);
+                    intent.putExtra("Amount",String.valueOf(TotalAmount));
+                    startActivity(intent);
                     Placeorder(params);
-                }
-                else{
-
                 }
             }
         });
