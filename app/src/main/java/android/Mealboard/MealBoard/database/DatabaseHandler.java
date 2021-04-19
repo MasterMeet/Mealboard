@@ -1,14 +1,12 @@
 package android.Mealboard.MealBoard.database;
+import android.Mealboard.MealBoard.models.ItemModel;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import androidx.annotation.Nullable;
-import android.Mealboard.MealBoard.models.ItemModel;
-import java.lang.reflect.Array;
+
 import java.util.ArrayList;
-import java.util.List;
 
 public class DatabaseHandler<List> extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION=1;
@@ -79,6 +77,12 @@ public class DatabaseHandler<List> extends SQLiteOpenHelper {
         }
         cursor.close();
         return cartitems;
+    }
+    public  void deletecart(){
+        String selectQuery = "DELETE FROM " +TABLE_CART;
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        sqLiteDatabase.execSQL(selectQuery);
+
     }
     public void removeItem(String id){
 

@@ -26,6 +26,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.gson.Gson;
 import com.squareup.picasso.Picasso;
+import com.valdesekamdem.library.mdtoast.MDToast;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -69,7 +70,7 @@ public class CartActivity extends AppCompatActivity {
                 if(preferences.getBoolean(Constants.KEY_IS_LOGGEDIN,false)) {
                     HashMap< String, String > params = new HashMap<>();
                     params.put("user_email", preferences.getString(Constants.KEY_EMAIL, "N/A"));
-                    params.put("total_amount", String.valueOf(TotalAmount));
+                    params.put("total_ammount", String.valueOf(TotalAmount));
                     params.put("products", new Gson().toJson(cartitems));
                     params.put("order_date", new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).format(new Date()));
                     Placeorder(params);
@@ -81,7 +82,7 @@ public class CartActivity extends AppCompatActivity {
     }
 
     private void Placeorder(HashMap <String, String> params){
-
+        new DatabaseHandler(getApplicationContext()).deletecart();
         final ProgressDialog progressDialog = new ProgressDialog(CartActivity.this);
         progressDialog.setTitle("Please Wait");
         progressDialog.setMessage("Placing Order");
@@ -96,17 +97,17 @@ public class CartActivity extends AppCompatActivity {
                 PlaceOrderResponse responseBody = response.body();
                 if(responseBody != null){
                     if(responseBody.getSuccess().equals("1")){
-                        Toast.makeText(CartActivity.this, "Ordered Successfully!",Toast.LENGTH_LONG).show();
+                        MDToast.makeText(CartActivity.this, "Ordered Successfully!",MDToast.TYPE_SUCCESS,Toast.LENGTH_LONG).show();
                         finish();
                     }
                     else{
-                        Toast.makeText(CartActivity.this, "Order Could placed",Toast.LENGTH_LONG).show();
+                        MDToast.makeText(CartActivity.this, "Order Could placed",MDToast.TYPE_ERROR,Toast.LENGTH_LONG).show();
                     }
                 }
                 else
-                    {
-                        Toast.makeText(CartActivity.this, "Some Error Accured!",Toast.LENGTH_LONG).show();
-                    }
+                {
+                    MDToast.makeText(CartActivity.this, "Some Error Accured!",MDToast.TYPE_ERROR,Toast.LENGTH_LONG).show();
+                }
                 progressDialog.dismiss();
             }
 
@@ -140,8 +141,8 @@ public class CartActivity extends AppCompatActivity {
 
         @NonNull
         @Override
-        public ItemAdapter.ItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-            return new ItemAdapter.ItemViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.cart_item_container,parent,false));
+        public ItemViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+            return new ItemViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.cart_item_container,parent,false));
         }
 
         @Override

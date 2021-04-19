@@ -17,10 +17,11 @@
             android:gravity="center_vertical"
             android:orientation="horizontal"
             tools:ignore="UseCompoundDrawables">
+
             <ImageView
-                android:layout_width="32dp"
-                android:layout_height="32dp"
                 android:id="@+id/image_back"
+                android:layout_width="32dp"
+                android:layout_height="16dp"
                 android:layout_margin="5dp"
                 android:src="@drawable/goback"
                 app:tint="#FFF"

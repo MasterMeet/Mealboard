@@ -1,12 +1,5 @@
 package android.Mealboard.MealBoard;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.Mealboard.MealBoard.models.OrderResponseModel;
 import android.Mealboard.MealBoard.models.OrdersModel;
 import android.Mealboard.MealBoard.network.NetworkClient;
@@ -23,6 +16,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
 import java.util.List;
 
 import dmax.dialog.SpotsDialog;
@@ -33,13 +32,15 @@ import retrofit2.Response;
 public class MyOrdersActivity extends AppCompatActivity {
     ImageView imageBack;
     RecyclerView OrderRecyclerView;
+    private final String TAG = "MyOrdersActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_orders);
 
-        //imageBack = findViewById(R.id.image_menu);
-        //imageBack.setOnClickListener(v -> onBackPressed());
+        imageBack = findViewById(R.id.image_back);
+        imageBack.setOnClickListener(v -> onBackPressed());
         OrderRecyclerView = findViewById(R.id.orders_recycler_view);
         OrderRecyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
         getorders();
@@ -60,7 +61,7 @@ public class MyOrdersActivity extends AppCompatActivity {
                 else
                 {
                     Toast.makeText(getApplicationContext(), "Your Order List is Empty", Toast.LENGTH_SHORT).show();
-                    }
+                }
                 alertDialog.cancel();
 
             }
