@@ -20,7 +20,6 @@
     <string name="about">About</string>
     <string name="register">Registration</string>
     <string name="register_btn">Register</string>
-    <string name="login">Login</string>
     <string name="log_out">Logout</string>
     <string name="rate_us">Rate Us</string>
     <string name="place_order">PLACE ORDER</string>
@@ -54,4 +53,5 @@
     <string name="parth_wap">9904654107</string>
     <string name="my_order">My Orders</string>
     <string name="pay_now">Pay Now</string>
+    <string name="login">Login</string>
 </resources>

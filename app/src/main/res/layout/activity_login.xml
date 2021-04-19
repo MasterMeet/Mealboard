@@ -23,7 +23,7 @@
             android:layout_alignParentLeft="true"
             style="@style/viewParent"
             android:layout_marginTop="20dp"
-            android:text="Login"
+            android:text="@string/login_now"
             android:layout_gravity="center_horizontal"
             android:textSize="@dimen/headerTextSize"
             android:textColor="@color/blackTextColor"
