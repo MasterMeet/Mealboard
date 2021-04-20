@@ -9,8 +9,8 @@ public class OrdersModel {
     @SerializedName("user_email")
     private String user_email;
 
-    @SerializedName("total_ammount")
-    private String total_ammount;
+    @SerializedName("total_amount")
+    private String total_amount;
 
     @SerializedName("products")
     private String products;
@@ -27,7 +27,11 @@ public class OrdersModel {
     }
 
     public String getTotal_ammount() {
-        return total_ammount;
+        return total_amount;
+    }
+
+    public String setTotal_ammount(String total_amount) {
+        return this.total_amount;
     }
 
     public String getProducts() {
