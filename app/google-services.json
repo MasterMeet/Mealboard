@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "161233638916",
+    "project_id": "sanvad-proj",
+    "storage_bucket": "sanvad-proj.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:161233638916:android:005ffb9ae1b4c381d44751",
+        "android_client_info": {
+          "package_name": "com.Maruti.Sanvad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "161233638916-u410jaka4tph59ecmq2fqpdk48aph0t2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.Maruti.Sanvad",
+            "certificate_hash": "d263e43c78bceebb0ee7b64d217157682f7c8218"
+          }
+        },
+        {
+          "client_id": "161233638916-62s6pl2ihm1glkup7g8241l2eo2h785g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8gtjJ7aB5wqXoJmPXjdFVBd2fBGSAhC0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "161233638916-62s6pl2ihm1glkup7g8241l2eo2h785g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
