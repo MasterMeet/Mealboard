@@ -26,9 +26,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/register"
-                android:layout_marginStart="120dp"
-                android:textSize="@dimen/headerTextSize"
-                android:textColor="@color/blackTextColor"
+                android:layout_marginStart="70dp"
+                android:textSize="30sp"
+                android:fontFamily="monospace"
+                android:textColor="@color/colorPrimary"
                 android:textStyle="bold" />
 
             <com.google.android.material.textfield.TextInputLayout
@@ -164,19 +165,21 @@
                 android:textColor="#ffffff"
                 android:id="@+id/btnLogin"
                 android:textStyle="bold"
+                android:fontFamily="casual"
                 android:textAllCaps="false"
-                android:textSize="14sp"/>
+                android:textSize="22sp"/>
 
             <TextView
                 android:id="@+id/text_login_now"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="50dp"
-                android:layout_marginStart="90dp"
+                android:layout_marginStart="70dp"
                 android:layout_marginBottom="50dp"
                 android:textStyle="bold"
                 android:textColor="@color/blue"
                 android:textSize="12sp"
+                android:fontFamily="monospace"
                 android:text="@string/register_to_login" />
         </LinearLayout>
     </ScrollView>

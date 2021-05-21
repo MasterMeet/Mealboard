@@ -18,7 +18,11 @@
                 android:layout_width="match_parent"
                 android:gravity="center"
                 android:textColor="#EF0B0B"
-                android:text="Devloper"
+                android:layout_marginTop="10dp"
+                android:fontFamily="casual"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:text="@string/developers"
                 android:layout_height="wrap_content"/>
             <androidx.cardview.widget.CardView
                 android:id="@+id/meetraj"
@@ -50,8 +54,9 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textStyle="bold"
+                            android:fontFamily="monospace"
                             android:text="@string/meetraj_gohil"
-                            android:textColor="#000000"
+                            android:textColor="#000"
                             android:textSize="18sp"/>
                         <TextView
                             android:layout_width="match_parent"
@@ -60,6 +65,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:text="@string/designation"
+                            android:fontFamily="monospace"
                             android:layout_height="wrap_content"
                             android:textSize="16sp"/>
                         <TextView
@@ -102,17 +108,19 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textStyle="bold"
+                            android:fontFamily="monospace"
                             android:text="@string/meet_name"
                             android:textColor="#000000"
                             android:textSize="18sp"/>
                         <TextView
-
+                            android:fontFamily="monospace"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textSize="16sp"/>
                         <TextView
                             android:layout_width="match_parent"
                             android:text="@string/designation"
+                            android:fontFamily="monospace"
                             android:layout_height="wrap_content"
                             android:textSize="16sp"/>
                         <TextView
@@ -155,6 +163,7 @@
                         android:layout_gravity="center_vertical">
                         <TextView
                             android:id="@+id/text_watch_name"
+                            android:fontFamily="monospace"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:textStyle="bold"
@@ -170,6 +179,7 @@
                             android:id="@+id/text_watch_price"
                             android:layout_width="match_parent"
                             android:text="@string/designation"
+                            android:fontFamily="monospace"
                             android:layout_height="wrap_content"
                             android:textSize="16sp"/>
                         <TextView
@@ -214,6 +224,7 @@
                             android:text="@string/parth_chauhan"
                             android:layout_height="wrap_content"
                             android:textStyle="bold"
+                            android:fontFamily="monospace"
                             android:textColor="#000000"
                             android:textSize="18sp"/>
                         <TextView
@@ -224,6 +235,7 @@
                             android:layout_width="match_parent"
                             android:text="@string/designation"
                             android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
                             android:textSize="16sp"/>
                         <TextView
                             android:layout_width="match_parent"
@@ -242,8 +254,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
+                android:text="@string/guide"
                 android:textColor="#EF0B0B"
-                android:text="@string/guide"/>
+                android:textSize="22sp"
+                android:fontFamily="casual"
+                android:textStyle="bold" />
+
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -270,6 +286,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:fontFamily="monospace"
                             android:textStyle="bold"
                             android:text="@string/project_guide"
                             android:textColor="#000000"
@@ -282,6 +299,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:text="@string/guide"
+                            android:fontFamily="monospace"
                             android:layout_height="wrap_content"
                             android:textSize="16sp"/>
                         <TextView

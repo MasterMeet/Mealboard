@@ -76,7 +76,11 @@ public class LoginActivity extends AppCompatActivity {
                         editor.putString(Constants.KEY_EMAIL,responseBody.getUserDetailsObject().getUserDetails().get(0).getEmail());
                         editor.apply();
                     MDToast.makeText(LoginActivity.this, responseBody.getMessage(), Toast.LENGTH_SHORT,MDToast.TYPE_SUCCESS).show();
-                    startActivity(new Intent(getApplicationContext(),CategoriesActivity.class));
+                        Intent loginIntent = new Intent(getApplicationContext(),DashboardActivity.class);
+                        loginIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        inputEmail.setText("");
+                        inputPassword.setText("");
+                        startActivity(loginIntent);
 
                     } else {
                     MDToast.makeText(LoginActivity.this, responseBody.getMessage(), Toast.LENGTH_LONG,MDToast.TYPE_ERROR).show();

@@ -26,7 +26,7 @@ public class DashboardActivity extends AppCompatActivity {
     TextView textUsername;
     CardView Cart, Grocery, myorder,myteam;
     TextView textEmail;
-    LinearLayout login,logout,layout_grocery,layout_about,rate;
+    LinearLayout login,logout,layout_grocery,layout_about,rate,share;
     View loginview,logoutview;
     @SuppressLint({"SetTextI18n", "WrongConstant"})
     @Override
@@ -50,6 +50,19 @@ public class DashboardActivity extends AppCompatActivity {
         layout_about = findViewById(R.id.layout_about) ;
         layout_about.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(),MyTeamActivity.class)));
         layout_grocery = findViewById(R.id.layout_grocery);
+        share = findViewById(R.id.shareApp);
+        share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_SEND);
+                intent.setType("text/plain");
+                String apkPath = " Download This Application:- https://drive.google.com/file/d/1_x6vqmmQxkoJPI4HftRnB4Kt4z0HhgNF/view?usp=sharing";
+                String shareSub = "MealBoard";
+                intent.putExtra(Intent.EXTRA_SUBJECT, shareSub);
+                intent.putExtra(Intent.EXTRA_TEXT, apkPath);
+                startActivity(Intent.createChooser(intent,"Share Via"));
+            }
+        });
         myorder = findViewById(R.id.myorders);
         myorder.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,8 +121,10 @@ public class DashboardActivity extends AppCompatActivity {
                 SharedPreferences.Editor editor=preferences.edit();
                 editor.clear();
                 editor.apply();
+                Intent logoutIntent = new Intent(this,DashboardActivity.class);
+                logoutIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(logoutIntent);
                 Toast.makeText(DashboardActivity.this,"You Have Been Logged Out!",Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(getApplicationContext(),DashboardActivity.class));
                 finish();
             });
             alert.setNegativeButton("NO", (dialog, which) -> dialog.dismiss());

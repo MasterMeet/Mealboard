@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="blackTextColor">#000</color>
-    <color name="colorLoginPrimaryDark">#FDFFFF</color>
-    <color name="colorPrimary">#6002ee</color>
-    <color name="colorPrimaryDark">#6277DC</color>
-    <color name="colorAccent">#B794f6</color>
-    <color name="colorWhite">#FBFBFB</color>
+    <color name="colorLoginPrimaryDark">#F5f5f5</color>
+    <color name="colorPrimary">#eb5f00</color>
+    <color name="colorPrimaryDark">#eb5f00</color>
+    <color name="colorAccent">#18B7c2</color>
+    <color name="colorWhite">#f5f5f5</color>
     <color name="blue">#3F51B5</color>
     <color name="red">#F44336</color>
     <color name="AddTocart">#227494</color>

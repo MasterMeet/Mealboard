@@ -23,8 +23,8 @@
             android:orientation="horizontal"
             tools:ignore="UseCompoundDrawables">
             <ImageView
-                android:layout_width="32dp"
-                android:layout_height="32dp"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
                 android:id="@+id/image_menu"
                 android:layout_margin="5dp"
                 android:src="@drawable/menu"
@@ -32,15 +32,15 @@
 
             <TextView
                 android:id="@+id/text_toolbar_title"
-                android:layout_width="230dp"
+                android:layout_width="270dp"
+                android:fontFamily="monospace"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:text="@string/app_name"
                 android:textColor="#fff"
                 android:textSize="18sp"
-                android:textStyle="bold">
-            </TextView>
+                android:textStyle="bold" />
 
         </LinearLayout>
     </androidx.appcompat.widget.Toolbar>
@@ -56,6 +56,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:padding="10dp"
             android:layout_weight="1"
             app:cardCornerRadius="7dp"
             app:cardElevation="7dp"
@@ -81,6 +82,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:text="@string/grocery"
+                    android:fontFamily="casual"
                     android:textColor="@color/colorPrimary"
                     android:textSize="22sp"
                     android:textStyle="bold" />
@@ -117,6 +119,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:text="@string/my_cart"
+                    android:fontFamily="casual"
                     android:textColor="@color/colorPrimary"
                     android:textSize="22sp"
                     android:textStyle="bold" />
@@ -163,6 +166,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:text="@string/my_orders"
+                    android:fontFamily="casual"
                     android:textColor="@color/colorPrimary"
                     android:textSize="22sp"
                     android:textStyle="bold" />
@@ -200,6 +204,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:text="@string/my_team"
+                    android:fontFamily="casual"
                     android:textColor="@color/colorPrimary"
                     android:textSize="22sp"
                     android:textStyle="bold" />
@@ -233,6 +238,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
                 android:background="#90000000"/>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -241,35 +247,40 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/title"
-                    android:textSize="35sp"
-                    android:textColor="#FFFFFF"
                     android:layout_margin="10dp"
-                    android:textStyle="bold"/>
+                    android:fontFamily="monospace"
+                    android:text="@string/title"
+                    android:textColor="#FFFFFF"
+                    android:textSize="35sp"
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="20sp"
                     android:id="@+id/text_username"
-                    android:visibility="gone"
-                    android:text="@string/username"
-                    android:layout_marginTop="45dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
-                    android:textColor="#FFFFFF"
-                    android:textStyle="bold"/>
-                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="20sp"
-                    android:layout_marginTop="5dp"
                     android:layout_marginLeft="10dp"
+                    android:layout_marginTop="45dp"
                     android:layout_marginRight="10dp"
+                    android:fontFamily="casual"
+                    android:text="@string/username"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <TextView
                     android:id="@+id/text_email"
-                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="casual"
                     android:text="@string/email"
-                    android:textColor="#FFFFFF"/>
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
 
             </LinearLayout>
         </FrameLayout>
@@ -286,12 +297,13 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_margin="5dp"
-                android:src="@drawable/login"
+                android:src="@drawable/account"
                 tools:ignore="ContentDescription" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/login"
+                android:fontFamily="monospace"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:layout_margin="5dp"/>
@@ -314,12 +326,13 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_margin="5dp"
-                android:src="@drawable/groceries"
+                android:src="@drawable/cart"
                 tools:ignore="ContentDescription" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/grocery"
+                android:fontFamily="monospace"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:layout_margin="5dp"/>
@@ -346,6 +359,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/about"
+                android:fontFamily="monospace"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:layout_margin="5dp"/>
@@ -367,12 +381,13 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_margin="5dp"
-                android:src="@drawable/logout"
+                android:src="@drawable/account"
                 tools:ignore="ContentDescription" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/log_out"
+                android:fontFamily="monospace"
                 android:textColor="#000000"
                 android:textSize="18sp"
                 android:layout_margin="5dp"/>
@@ -395,14 +410,44 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_margin="5dp"
-                android:src="@drawable/rateus"
+                android:src="@drawable/rating"
                 tools:ignore="ContentDescription" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="#000000"
+                android:fontFamily="monospace"
                 android:textSize="18sp"
                 android:text="@string/rate_us"
+                android:layout_margin="5dp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/shareApk"
+            android:background="#BDBDBD"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:id="@+id/shareApp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="5dp"
+                android:src="@drawable/share"
+                tools:ignore="ContentDescription" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:fontFamily="monospace"
+                android:textSize="18sp"
+                android:text="@string/share_mealboard"
                 android:layout_margin="5dp"/>
         </LinearLayout>
     </LinearLayout>
