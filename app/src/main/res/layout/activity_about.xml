@@ -22,20 +22,24 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#fff"
+            android:fontFamily="cursive"
+            android:textSize="30sp"
+            android:textColor="@color/colorPrimaryDark"
             android:id="@+id/title"
             android:layout_below="@id/imageprofile"
             android:textStyle="bold"
             android:layout_centerHorizontal="true"
             android:text="@string/meet_name"
             android:layout_marginTop="5dp"
-            android:textSize="18sp"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/title"
             android:id="@+id/skill"
+            android:textColor="@color/colorAccent"
+            android:fontFamily="monospace"
+            android:textSize="16sp"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="5dp"
             android:text="@string/designation"
@@ -63,6 +67,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:textSize="18sp"
+                android:fontFamily="monospace"
+                android:textColor="@color/colorAccent"
                 android:text="@string/meet_name"
                 android:layout_marginStart="5dp"
                 android:layout_height="wrap_content"
@@ -82,13 +88,16 @@
                 android:layout_marginStart="70sp"
                 android:src="@drawable/ic_baseline_email_24"
                 android:layout_marginLeft="70sp" />
+
             <TextView
                 android:layout_width="wrap_content"
-                android:textSize="18sp"
-                android:text="@string/gmail"
-                android:layout_marginStart="5dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp" />
+                android:layout_marginStart="5dp"
+                android:fontFamily="monospace"
+                android:textColor="@color/colorAccent"
+                android:layout_marginLeft="5dp"
+                android:text="@string/gmail"
+                android:textSize="18sp" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -108,6 +117,8 @@
                 android:layout_width="wrap_content"
                 android:textSize="18sp"
                 android:text="MeetBariya"
+                android:fontFamily="monospace"
+                android:textColor="@color/colorAccent"
                 android:layout_marginStart="5dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp" />
@@ -117,7 +128,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_below="@id/linear_layout2"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="140dp"
             android:id="@+id/linear_layout3"
             tools:ignore="UseCompoundDrawables">
             <ImageView
@@ -141,7 +152,8 @@
             android:textStyle="bold"
             android:textSize="18sp"
             android:clickable="false"
-            android:background="@drawable/btnsignin_gradient"
+            android:fontFamily="monospace"
+            android:background="@color/colorPrimaryDark"
             android:layout_alignParentBottom="true"
             android:layout_height="wrap_content"/>
 

@@ -124,7 +124,7 @@ public class DashboardActivity extends AppCompatActivity {
                 Intent logoutIntent = new Intent(this,DashboardActivity.class);
                 logoutIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(logoutIntent);
-                Toast.makeText(DashboardActivity.this,"You Have Been Logged Out!",Toast.LENGTH_SHORT).show();
+                MDToast.makeText(DashboardActivity.this,"You Have Been Logged Out!",Toast.LENGTH_LONG,MDToast.TYPE_SUCCESS).show();
                 finish();
             });
             alert.setNegativeButton("NO", (dialog, which) -> dialog.dismiss());

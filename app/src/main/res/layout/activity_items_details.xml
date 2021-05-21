@@ -82,7 +82,6 @@
                         android:layout_height="wrap_content"
                         android:textColor="#fff"
                         android:gravity="center"
-
                         android:layout_weight="1"
                         android:layout_margin="5dp"
                         android:id="@+id/text_quantity"
@@ -93,7 +92,8 @@
                         android:layout_height="wrap_content"
                         android:textColor="#fff"
                         android:gravity="center"
-                        android:layout_margin="5dp"
+                        android:layout_marginLeft="150dp"
+                        android:layout_marginTop="5dp"
                         android:id="@+id/text_price"
                         android:textSize="16sp"/>
                     <TextView
@@ -126,6 +126,7 @@
         android:layout_marginTop="8dp"
         android:layout_gravity="center_horizontal"
         android:text="Add To Cart"
+        android:fontFamily="monospace"
         android:background="@color/colorPrimaryDark"
         android:textColor="#ffffff"
         android:id="@+id/btnAddToCart"

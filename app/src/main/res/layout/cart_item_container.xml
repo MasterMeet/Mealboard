@@ -32,20 +32,24 @@
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
                 android:textColor="#000000"
+                android:fontFamily="monospace"
                 android:textSize="18sp"/>
             <TextView
                 android:id="@+id/text_item_quantity"
                 android:layout_width="match_parent"
+                android:fontFamily="monospace"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"/>
             <TextView
                 android:id="@+id/text_item_price"
                 android:layout_width="match_parent"
+                android:fontFamily="monospace"
                 android:layout_height="wrap_content"
                 android:textSize="16sp"/>
             <TextView
                 android:id="@+id/text_remove_item"
                 android:layout_width="match_parent"
+                android:fontFamily="monospace"
                 android:layout_height="wrap_content"
                 android:text="@string/remove_from_cart"
                 android:textColor="@color/red"

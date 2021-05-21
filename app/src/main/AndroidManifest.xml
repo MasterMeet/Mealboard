@@ -7,9 +7,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/groceries"
+        android:icon="@drawable/shopping_basket"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/groceries"
+        android:roundIcon="@drawable/shopping_basket"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">

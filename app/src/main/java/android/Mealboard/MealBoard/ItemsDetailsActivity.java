@@ -14,6 +14,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.squareup.picasso.Picasso;
+import com.valdesekamdem.library.mdtoast.MDToast;
 
 import java.util.List;
 
@@ -69,8 +70,7 @@ public class ItemsDetailsActivity extends AppCompatActivity {
 
                 DatabaseHandler databaseHandler = new DatabaseHandler(getApplicationContext());
                 databaseHandler.AddToCart(itemModel);
-
-                Toast.makeText(ItemsDetailsActivity.this,"Added To Cart !", Toast.LENGTH_SHORT).show();
+                MDToast.makeText(ItemsDetailsActivity.this,"Added To Cart !",Toast.LENGTH_LONG,MDToast.TYPE_SUCCESS).show();
             }
         });
         DatabaseHandler databaseHandler = new DatabaseHandler(getApplicationContext());

@@ -1,10 +1,5 @@
 package android.Mealboard.MealBoard;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import android.Mealboard.MealBoard.models.CategoryModel;
 import android.Mealboard.MealBoard.models.CategoryResponseModel;
 import android.Mealboard.MealBoard.network.NetworkClient;
@@ -17,7 +12,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.valdesekamdem.library.mdtoast.MDToast;
+
 import java.util.List;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -60,7 +65,6 @@ public class CategoriesActivity extends AppCompatActivity {
             @Override
             public void onResponse(@NonNull Call<CategoryResponseModel> call,@NonNull Response<CategoryResponseModel> response) {
 
-                Toast.makeText(CategoriesActivity.this, "Success", Toast.LENGTH_SHORT).show();
                 CategoryResponseModel categoryResponseModel = response.body();
                 CategoriesAdapter categoriesAdapter= new CategoriesAdapter(categoryResponseModel.getCategories());
                 categoriesRecyclerView.setAdapter(categoriesAdapter);
@@ -69,13 +73,11 @@ public class CategoriesActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(@NonNull Call<CategoryResponseModel> call,@NonNull Throwable t) {
-                Toast.makeText(CategoriesActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
+                MDToast.makeText(CategoriesActivity.this,t.getMessage(),Toast.LENGTH_LONG,MDToast.TYPE_ERROR).show();
                 progressDialog.cancel();
             }
         });
     }
-
-
 
 
     class CategoryViewHolder extends RecyclerView.ViewHolder {
@@ -113,12 +115,9 @@ public class CategoriesActivity extends AppCompatActivity {
                 holder.categoryItemLayout.setOnClickListener((View v) ->{
                     Intent intent = new Intent(getApplicationContext(), ItemsActivity.class);
                     intent.putExtra("category", categories.get(holder.getAdapterPosition()).getCategory());
-                    Toast.makeText(CategoriesActivity.this, categories.get(holder.getAdapterPosition()).getCategory(), Toast.LENGTH_SHORT).show();
                     startActivity(intent);
                 });
-
             }
-
         }
     }
 

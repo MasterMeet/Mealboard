@@ -12,6 +12,7 @@
     <TextView
         android:id="@+id/text_category"
         android:layout_width="match_parent"
+        android:fontFamily="monospace"
         android:layout_height="wrap_content"
         android:padding="20dp"
         android:textSize="18sp" />
