@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grad_1">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/animatedlayout"
+        tools:context=".MeetrajAboutActivity">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageprofile"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/meetraj_photo" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/title"
+            android:fontFamily="cursive"
+            android:textSize="30sp"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_below="@id/imageprofile"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:text="@string/meetraj_gohil"
+            android:layout_marginTop="5dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:id="@+id/skill"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"
+            android:fontFamily="monospace"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/designation"
+            />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/bgrmborder"
+            android:id="@+id/imgwave"
+            android:layout_below="@id/skill" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/imgwave"
+            android:layout_marginTop="30dp"
+            android:id="@+id/linear_layout"
+            tools:ignore="UseCompoundDrawables">
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="70sp"
+                android:src="@drawable/youtube"
+                android:layout_marginLeft="70sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="monospace"
+                android:textColor="@color/colorAccent"
+                android:text="@string/meetraj_gohil"
+                android:textSize="18sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/linear_layout"
+            android:layout_marginTop="30dp"
+            android:id="@+id/linear_layout1"
+            tools:ignore="UseCompoundDrawables">
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="70sp"
+                android:src="@drawable/ic_baseline_email_24"
+                android:layout_marginLeft="70sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="18sp"
+                android:text="@string/meetraj_email"
+                android:layout_marginStart="5dp"
+                android:fontFamily="monospace"
+                android:textColor="@color/colorAccent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@id/linear_layout1"
+            android:layout_marginTop="30dp"
+            android:id="@+id/linear_layout2"
+            tools:ignore="UseCompoundDrawables">
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="70sp"
+                android:src="@drawable/fb"
+                android:layout_marginLeft="70sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="18sp"
+                android:text="@string/meetraj_gohil"
+                android:layout_marginStart="5dp"
+                android:fontFamily="monospace"
+                android:textColor="@color/colorAccent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="140dp"
+            android:layout_below="@id/linear_layout2"
+            android:id="@+id/linear_layout3"
+            tools:ignore="UseCompoundDrawables">
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="70sp"
+                android:src="@drawable/wap"
+                android:layout_marginLeft="70sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="18sp"
+                android:text="@string/meetraj_wap"
+                android:layout_marginStart="5dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp" />
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:text="@string/thanks_for_visit"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:clickable="false"
+            android:fontFamily="monospace"
+            android:background="@color/colorPrimaryDark"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "83919224369",
+    "project_id": "mealboard-authentication",
+    "storage_bucket": "mealboard-authentication.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:83919224369:android:f22f8956d6894caa285f10",
+        "android_client_info": {
+          "package_name": "android.Mealboard.MealBoard"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "83919224369-sgf5e0ccnrt2lv8ta04u16o1p6079lbn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "android.Mealboard.MealBoard",
+            "certificate_hash": "d263e43c78bceebb0ee7b64d217157682f7c8218"
+          }
+        },
+        {
+          "client_id": "83919224369-nti4k9u3jfdpg0m338mrqvtomuntnpd6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1Nrh74HyKart4wP2csMDkFlbiTZvE5tQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "83919224369-nti4k9u3jfdpg0m338mrqvtomuntnpd6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
